@@ -4,13 +4,14 @@
   "description": "Backend of immunization-tracker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/immunization-tracker/immunization-tracker-BE.git"
   },
-  "author": "",
+  "author": "Hung-Pham",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/immunization-tracker/immunization-tracker-BE/issues"
