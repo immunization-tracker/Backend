@@ -11,10 +11,12 @@ exports.up = function(knex, Promise) {
     .notNullable()
     users
     .string('role', 50)
+    .defaultTo('patient')
+    .notNullable()
   })
 };
 
 exports.down = function(knex, Promise) {
   return knex.schema.dropTableIfExists('users')
-  
+
 };
