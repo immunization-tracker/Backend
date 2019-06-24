@@ -41,7 +41,7 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: dbConnection,
     pool: {
       afterCreate: (conn, done) => {
