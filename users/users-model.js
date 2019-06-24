@@ -27,7 +27,7 @@ function findBy(param) {
 
 async function addDoctor(user) {
     const [id] = await db('doctors').insert(user)
-    return await findById(id)
+    return findById(id);
 }
 
 // function addDoctor(user) {
@@ -41,7 +41,7 @@ async function addDoctor(user) {
 function findById(id){
     return db('doctors')
     .where({ id })
-    .first();
+    // .first();
 }
 
 function getAllRecords() {
