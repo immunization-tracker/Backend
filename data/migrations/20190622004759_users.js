@@ -32,7 +32,6 @@ exports.up = function(knex, Promise) {
     records.increments()
     records
     .integer('doctor_id')
-    .unique()
     .unsigned()
     .references('id')
     .inTable('doctors')
@@ -44,7 +43,7 @@ exports.up = function(knex, Promise) {
     .unique()
     .unsigned()
     .references('id')
-    .inTable('patient')
+    .inTable('patients')
     .onDelete('CASCADE')
     .onUpdate('CASCADE')
     .nullable()
