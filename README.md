@@ -41,7 +41,7 @@ The backend of the Immunization Tracker website
 
 ### DELETE a record file
 
-    Link:https://immunizationtracker.herokuapp.com/api/:id/records
+    Link: https://immunizationtracker.herokuapp.com/api/:id/records
     Parameter:
         id
         
