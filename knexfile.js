@@ -1,6 +1,6 @@
 // Update with your config settings.
 
-const dbConnection = 'from heroku';
+const dbConnection = process.env.DATABASE_URL;
 
 
 module.exports = {
