@@ -27,7 +27,7 @@ function findBy(param) {
 
 async function addDoctor(user) {
     const [id] = await db('doctors').insert(user)
-    return findById(id);
+    return id;
 }
 
 // function addDoctor(user) {
