@@ -14,6 +14,10 @@ The backend of the Immunization Tracker website
 ### GET List of All Doctors
 
     Link: https://immunizationtracker.herokuapp.com/api/doctors
+
+### GET List of All Records
+
+    Link: https://immunizationtracker.herokuapp.com/api/records
     
 ### GET list of Records by Doctors
     

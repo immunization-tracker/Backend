@@ -8,7 +8,8 @@ module.exports = {
     getDoctorRecords,
     addRecord,
     updateRecord,
-    deleteRecord
+    deleteRecord,
+    getAllRecords,
 }
 
 function listAllDoctors() {
@@ -33,6 +34,11 @@ function findById(id){
     return db('doctors')
     .where({ id })
     .first();
+}
+
+function getAllRecords() {
+    return db('records')
+    .select('id', 'doctor_id', 'patient_name', 'DOB', 'patient_id')
 }
 
 function getDoctorRecords(doctor_id) {

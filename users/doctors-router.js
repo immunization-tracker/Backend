@@ -15,6 +15,17 @@ router.get('/doctors', restricted, ( req, res) => {
     })
 })
 
+router.get('/records', restricted, ( req, res) => {
+    Doctors
+    .getAllRecords()
+    .then(records => {
+        res.json(records)
+    })
+    .catch(err => {
+        res.status(500).json({ message: 'Cannot be found' })
+    })
+})
+
 router.get('/:doctor_id/records', restricted, (req, res) => {
     
     const { doctor_id } = req.params;
