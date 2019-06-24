@@ -15,7 +15,7 @@ router.post('/staff/register', (req, res) => {
             res.status(201).json(saved)
         })
         .catch(err => {
-            res.status(500).json(err)
+            res.status(500).json({message: "Error registring In", error: error.toString() }) 
         })
 })
 
