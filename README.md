@@ -21,6 +21,29 @@ The backend of the Immunization Tracker website
     Parameter:  doctor_id
 
 
-### Login
+### POST a record file
+
+    Link: https://immunizationtracker.herokuapp.com/api/records
+    Parameter:
+        patient_name
+        doctor_id
+        DOB (optional)
+        patient_id (optional)
+
+### PUT a record file
+
+    Link: https://immunizationtracker.herokuapp.com/api/:id/records
+    Parameter:
+        id,
+        patient_name
+        patient_id
+        DOB
+
+### DELETE a record file
+
+    Link:https://immunizationtracker.herokuapp.com/api/:id/records
+    Parameter:
+        id
+        
 
   
