@@ -5,7 +5,7 @@ The backend of the Immunization Tracker website
 
 ### Doctors' Login
 
-    Link: https://immunizationtracker.herokuapp.com/api/staff/login
+    Link: https://immu-tracker2.herokuapp.com/api/staff/login
     Parameter:
         username, password
     Note: 
@@ -13,21 +13,21 @@ The backend of the Immunization Tracker website
 
 ### GET List of All Doctors
 
-    Link: https://immunizationtracker.herokuapp.com/api/doctors
+    Link: https://immu-tracker2.herokuapp.com/api/doctors
 
 ### GET List of All Records
 
-    Link: https://immunizationtracker.herokuapp.com/api/records
+    Link: https://immu-tracker2.herokuapp.com/api/records
     
 ### GET list of Records by Doctors
     
-    Link: https://immunizationtracker.herokuapp.com/api/:doctor_id/records
+    Link: https://immu-tracker2.herokuapp.com/api/:doctor_id/records
     Parameter:  doctor_id
 
 
 ### POST a record file
 
-    Link: https://immunizationtracker.herokuapp.com/api/records
+    Link: https://immu-tracker2.herokuapp.com/api/records
     Parameter:
         patient_name
         doctor_id
@@ -36,7 +36,7 @@ The backend of the Immunization Tracker website
 
 ### PUT a record file
 
-    Link: https://immunizationtracker.herokuapp.com/api/:id/records
+    Link: https://immu-tracker2.herokuapp.com/api/:id/records
     Parameter:
         id,
         patient_name
@@ -45,7 +45,7 @@ The backend of the Immunization Tracker website
 
 ### DELETE a record file
 
-    Link: https://immunizationtracker.herokuapp.com/api/:id/records
+    Link: https://immu-tracker2.herokuapp.com/api/:id/records
     Parameter:
         id
         
