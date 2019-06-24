@@ -3,9 +3,12 @@ const db = require('../data/dbConfig.js')
 module.exports = {
     findBy, 
     findById,
-     addDoctor, 
-     listAllDoctors, 
-     getDoctorsPatients
+    addDoctor, 
+    listAllDoctors, 
+    getDoctorRecords,
+    addRecord,
+    updateRecord,
+    deleteRecord
 }
 
 function listAllDoctors() {
@@ -32,8 +35,27 @@ function findById(id){
     .first();
 }
 
-function getDoctorsPatients(id){
-    return db('doctors as d')
-    .join('records as r', 'r.doctor_id', 'd.id' )
-    .select('d.name', 'r.patient_name', '' )
+function getDoctorRecords(doctor_id) {
+   return db('records as r')
+    .join('doctors as d', 'd.id','r.doctor_id')
+    .select('r.patient_name','r.id as record_id', 'd.username as Doctor', 'r.DOB as DoB' )
+    .where('r.doctor_id', doctor_id)
+}
+
+function addRecord(record){
+    return db('records')
+    .insert(record)
+    .then(ids => ({ id: ids[0]}));
+}
+
+function updateRecord(id, record){
+    return db('records')
+    .where('id', id)
+    .update(record)
+    
+}
+function deleteRecord(id) {
+    return db('records')
+    .where('id', id)
+    .del();
 }
