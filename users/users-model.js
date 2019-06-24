@@ -25,18 +25,16 @@ function findBy(param) {
 
 //REGISTER
 
-async function addDoctor(user) {
-    const [id] = await db('doctors').insert(user)
-    return id;
-}
-
-// function addDoctor(user) {
-//     return db('doctors')
-//     .insert(user, 'id')
-//     .then(([id]) => {
-//         findBy(id).first()
-//     })
+// async function addDoctor(user) {
+//     const [id] = await db('doctors').insert(user)
+//     return id;
 // }
+
+function addDoctor(user){
+    return db('doctors')
+    .insert(user)
+    .then(ids => ({ id: ids[0]}));
+}
 
 function findById(id){
     return db('doctors')
