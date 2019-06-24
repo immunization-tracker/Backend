@@ -1,0 +1,35 @@
+{
+  "name": "immunization-tracker-be",
+  "version": "1.0.0",
+  "description": "Backend of immunization-tracker",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immunization-tracker/immunization-tracker-BE.git"
+  },
+  "author": "Hung-Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/immunization-tracker/immunization-tracker-BE/issues"
+  },
+  "homepage": "https://github.com/immunization-tracker/immunization-tracker-BE#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "helmet": "^3.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.17.6",
+    "moment": "^2.24.0",
+    "sqlite3": "^4.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
