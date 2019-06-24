@@ -12,6 +12,7 @@ router.post('/staff/register', (req, res) => {
 
     Users.addDoctor(user)
         .then(saved => {
+            console.log(saved)
             res.status(201).json(saved)
         })
         .catch(err => {

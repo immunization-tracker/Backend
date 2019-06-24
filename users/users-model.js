@@ -25,18 +25,18 @@ function findBy(param) {
 
 //REGISTER
 
-// async function addDoctor(user) {
-//     const [id] = await db('doctors').insert(user)
-//     return findById(id)
-// }
-
-function addDoctor(user) {
-    return db('doctors')
-    .insert(user, 'id')
-    .then(([id]) => {
-        findById(id)
-    })
+async function addDoctor(user) {
+    const [id] = await db('doctors').insert(user)
+    return await findById(id)
 }
+
+// function addDoctor(user) {
+//     return db('doctors')
+//     .insert(user, 'id')
+//     .then(([id]) => {
+//         findBy(id).first()
+//     })
+// }
 
 function findById(id){
     return db('doctors')
