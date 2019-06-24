@@ -4,7 +4,8 @@ const cors = require('cors');
 
 const server = express()
 
-const authDocRouter = require('../auth/auth-doctor-router');
+const authRouter = require('../auth/auth-doctor-router.js');
+const doctorsRouter = require('../users/doctors-router.js')
 
 server.use(express.json());
 server.use(helmet());
@@ -14,7 +15,8 @@ server.get('/', (req, res) => {
     res.send('<h1> API is running!!! </h1>')
 })
 
-server.use('/api/', authDocRouter);
+server.use('/api/', authRouter);
+server.use('/api', doctorsRouter);
 
 
 

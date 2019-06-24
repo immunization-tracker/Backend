@@ -1,11 +1,15 @@
 const db = require('../data/dbConfig.js')
 
 module.exports = {
-    findBy, findById, addDoctor, listAllUsers
+    findBy, 
+    findById,
+     addDoctor, 
+     listAllDoctors, 
+     getDoctorsPatients
 }
 
-function listAllUsers() {
-    return db('doctors').select('id', 'username')
+function listAllDoctors() {
+    return db('doctors').select('id', 'username', 'name')
 }
 
 //LOGIN by finding first
@@ -26,4 +30,10 @@ function findById(id){
     return db('doctors')
     .where({ id })
     .first();
+}
+
+function getDoctorsPatients(id){
+    return db('doctors as d')
+    .join('records as r', 'r.doctor_id', 'd.id' )
+    .select('d.name', 'r.patient_name', '' )
 }
