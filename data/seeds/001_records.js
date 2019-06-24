@@ -15,7 +15,7 @@ exports.seed = async function(knex, Promise) {
     fakeRecords.push(createFakeRecords());
   }
 
-  return knex('records').truncate()
+  return knex('records').del()
     .then(function () {
       return knex('records').insert(fakeRecords);
     });
