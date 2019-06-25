@@ -2,7 +2,11 @@
 The backend of the Immunization Tracker website
 
 ## Documentation
-
+### Doctor's Registration:
+    Link: https://immu-tracker2.herokuapp.com/api/staff/register
+    Parameter:
+        username, password
+        name *optional*
 ### Doctors' Login
 
     Link: https://immu-tracker2.herokuapp.com/api/staff/login
