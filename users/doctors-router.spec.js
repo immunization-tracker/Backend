@@ -124,7 +124,7 @@ describe('after logging in', () => {
             .send({ patient_name: 'hanah', doctor_id: '1' })
             .expect(200)
         })
-        it('delete a record', () => {
+        it('DELETE a record', () => {
             return supertest(server)
             .delete('/api/1/records')
             .set('Authorization', `${token}`)
