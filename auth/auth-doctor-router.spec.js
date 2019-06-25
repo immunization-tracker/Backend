@@ -3,19 +3,8 @@ const supertest = require('supertest');
 const server = require('../api/server.js');
 
 describe('doctors table', () => {
-    // beforeEach(async () => {
-    //     await db('doctors').truncate()
-    // });
-
     describe('registering', () => {
-        it('testing with registering', () => {
-            return supertest(server)
-            .post('/api/staff/register')
-            .send({ username: 'hung', password: 'pass' })
-            .set('Accept', 'application/json')
-            .expect(201);
-        })
-        it('expecting 500, because adding an already existing', () => {
+        it('testing with registering with existing id', () => {
             return supertest(server)
             .post('/api/staff/register')
             .send({ username: 'hung', password: 'pass' })
