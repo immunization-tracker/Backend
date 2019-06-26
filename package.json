@@ -6,11 +6,11 @@
   "scripts": {
     "server": "nodemon index.js",
     "start": "node index.js",
-    "test": "cross-env DB_ENV=testing jest --watch --verbose"  
+    "test": "cross-env DB_ENV=testing jest --watch --verbose"
   },
   "jest": {
-		"testEnvironment": "node"
-	},
+    "testEnvironment": "node"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/immunization-tracker/immunization-tracker-BE.git"
